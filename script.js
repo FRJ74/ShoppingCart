@@ -107,7 +107,9 @@ class ShoppingCart {
   }
 
   addItem(id,products) {
-    const product = products.find(item => item.id === id)
+    const product = products.find((item) => item.id === id);
+    const {name, price} = product;
+    this.items.push(product);
   } 
 
 };
